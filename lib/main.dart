@@ -52,26 +52,31 @@ class HomePgaeState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            "Home Page - ",
+            "Home Page",
             style: TextStyle(color: Colors.blueGrey[200]),
           ),
           backgroundColor: Colors.blueGrey,
         ),
         body:Container(
           decoration: BoxDecoration(
-            gradient:   LinearGradient(colors: [
-              Colors.orange.shade100,
-              Colors.purple.shade100
-            ])
+            gradient:   RadialGradient(colors: [
+              Color(0xffff8177),
+               Color(0xfff6d365),
+              // Color(0xffb12a5b),
+             
+            ],
+           center: Alignment.bottomCenter,
+          
           ),
-          child: ClipRRect(
+          
+        ),
+        child: ClipRRect(
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20)),
             child: Center(child: Image.asset("assets/images/girl.png",
             width: 300,
             height: 200,
-            fit: BoxFit.fill,))),
-        ),
-          );
+            fit: BoxFit.fill,),),),
+          ));
   }
 } 
 /* 
