@@ -42,6 +42,112 @@ class HomePage extends StatefulWidget {
 
 class HomePgaeState extends State<HomePage> {
  
+ var arrData = [
+  {
+    "Name" : "Syeda",
+   "MobNo" : "03000101013",
+   "unRead": "1"
+  },
+  {
+    "Name" : "Yusma",
+   "MobNo" : "030034171013",
+   "unRead": "4"
+  },
+  {
+    "Name" : "Hassan",
+   "MobNo" : "03670151013",
+   "unRead": "2"
+  },
+  {
+    "Name" : "Amna",
+   "MobNo" : "031108991013",
+   "unRead": "5"
+  },
+  {
+    "Name" : "Sara",
+   "MobNo" : "030001014029",
+   "unRead": "1"
+  },
+  {
+    "Name" : "Amhmad",
+   "MobNo" : "03000956713",
+   "unRead": "8"
+  },
+  {
+    "Name" : "Ali",
+   "MobNo" : "03047895013",
+   "unRead": "7"
+  },
+ ] ;
+
+  //Color bgColor = Colors.blueGrey;
+ Decoration myDecor = BoxDecoration(borderRadius: BorderRadius.circular(2),
+ color: Colors.blueGrey);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Home Page",
+            style: TextStyle(color: Colors.blueGrey[200]),
+          ),
+          backgroundColor: Colors.blueGrey,
+        ),
+        body:ListView(
+          children: arrData.map((value){
+            return ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text(value["Name"].toString()),
+              subtitle: Text(value["MobNo"].toString()),
+              trailing: CircleAvatar(child: Text(value["unRead"].toString()),
+              backgroundColor: Colors.green,
+              radius: 12,),
+            );
+          }).toList(),
+        )
+          
+      );
+  }
+} 
+/*<<============ Gradient ===============================================>>
+void main() {
+  runApp(const MyProfile_App());
+}
+
+class MyProfile_App extends StatelessWidget {
+  const MyProfile_App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "My Profile App",
+      theme: ThemeData(
+          textTheme: TextTheme(
+              headlineLarge: TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic),
+              titleMedium: TextStyle(
+                fontSize: 16,
+                fontStyle: FontStyle.italic,
+                color: Colors.black,
+              ))),
+      home: Splashpage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return HomePgaeState();
+  }
+}
+
+class HomePgaeState extends State<HomePage> {
+ 
  var arrIndex = [1,2,3,4,5,6,7,8,9,10,11] ;
 
   //Color bgColor = Colors.blueGrey;
@@ -79,6 +185,7 @@ class HomePgaeState extends State<HomePage> {
           ));
   }
 } 
+======================================================================== */
 /* 
 ======================= ListWheelScrollView ================================
 void main() {
