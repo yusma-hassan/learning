@@ -52,7 +52,7 @@ class HomePgaeState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            "Home Page",
+            "Home Page - ",
             style: TextStyle(color: Colors.blueGrey[200]),
           ),
           backgroundColor: Colors.blueGrey,
